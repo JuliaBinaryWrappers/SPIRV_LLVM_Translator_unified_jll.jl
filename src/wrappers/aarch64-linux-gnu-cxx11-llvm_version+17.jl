@@ -9,7 +9,7 @@ function __init__()
     JLLWrappers.@init_library_product(
         libLLVMSPIRV,
         "lib/libLLVMSPIRVLib.so",
-        nothing,
+        RTLD_LAZY | RTLD_DEEPBIND,
     )
 
     JLLWrappers.@init_executable_product(
